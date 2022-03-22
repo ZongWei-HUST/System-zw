@@ -1,0 +1,24 @@
+{
+  "base": {
+    "Dashboard": "Dashboard",
+    "Datasets": "Datasets",
+    "Models": "Models",
+    "Train": "Train",
+    "Predict": "Predict",
+    "Test": "Test",
+    "Deployment": "Deployment",
+    "Tabular": "Tabular",
+    "Image": "Image",
+    "Run": "Run",
+    "Tensorboard": "Tensorboard"
+  },
+  "Dashboard": {
+    "teamIntro": "Team Introduction",
+    "teamIntroInfo": "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The surface defect intelligent recognition system is developed by the Operation Research & Optimization team. The team is based in the State Key Laboratory of Digital Manufacturing and Equipment of Huazhong University of Science and Technology, led by Academician Li Peigen, Professors Gao Liang and Li Xinyu, and focuses on learning and optimization of manufacturing systems. The team has undertaken more than 20 national projects, such as the key projects of the National Natural Science Foundation of China, 973 projects and 863 projects, has published 12 books, including 4 monographs in English, more than 400 SCI papers.",
+    "systemIntro": "System Introduction",
+    "systemIntroInfo": "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The surface defect intelligent recognition system mainly includes: data import, data augmentation, model building, model loading, model saving, result visualisation and other modules. The entire system includes a database of defect recognition and a library of algorithmic models. The defect recognition models are mainly convolutional neural networks, which can be imported and built using the Drag & Drop module. The current version is 1.0 beta, mainly applicable to the surface defect classification, and will continue to be developed for the detection and localization.",
+    "systemModelSave": "Models available",
+    "systemDatasetSave": "Datasets available",
+    "systemDevelopers": "System Developers"
+  }
+}

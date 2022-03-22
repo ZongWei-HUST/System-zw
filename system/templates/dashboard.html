@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% from '_render_field.html' import render_checkbox, render_option_field, render_field_two_col, render_single_field, render_field, render_gener_field %}
+
+{% block styles %}
+    {{ super() }}
+    <link href="{{ url_for('.static', filename='base/css/tables.css') }}" rel="stylesheet">
+    <style type="text/css">
+    h5 {color: darkblue}
+    p{text-align: justify;}
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">YOU ARE HERE</li>
+        <li class="breadcrumb-item active"> Home</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-5">
+            <section class="widget min-height-300 widget-overflow">
+                <header>
+                    <h5>
+                        <b>  <span class="fw-semi-bold" id="teamIntro"></span></b>
+                    </h5>
+                </header>
+                <div>
+                    <p id="teamIntroInfo"></p>
+                </div>
+                <br>
+                <header>
+                    <h5>
+                        <b>  <span class="fw-semi-bold" id="systemIntro"></span></b>
+                    </h5>
+                </header>
+                <div>
+                    <p id="systemIntroInfo"></p>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-7" id="generate_div">
+            <section class="widget min-height-300 widget-overflow">
+                <header>
+                    <h5>
+                        <b id="systemModelSave"></b>
+                    </h5>
+                </header>
+                <br>
+                <ul>
+                    <b>
+                        <li>VGG16</li>
+                        <li>DenseNet</li>
+                    </b>
+                </ul>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  <!-- 空格-->
+                    Some models have same structure.
+                </p>
+                <header>
+                    <h5>
+                        <b id="systemDatasetSave"></b>
+                    </h5>
+                </header>
+                <br>
+                <ul>
+                    <b>
+                        <li>Iris</li>
+                        <li>NEU-CLS</li>
+                    </b>
+                </ul>
+                <p>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    NEU surface defect database
+                </p>
+                <header>
+                    <h5>
+                        <b id="systemDevelopers"></b>
+                    </h5>
+                </header>
+                <br>
+                <p>
+                    <b>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    李新宇&nbsp&nbsp&nbsp
+                    彭旭东&nbsp&nbsp&nbsp
+                    肖畅奇&nbsp&nbsp&nbsp
+                    高艺平
+                    </b>
+                </p>
+            </section>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sb-dashboard').addClass('active');
+        });
+        function change_text(language) {
+            language = language["Dashboard"];
+            $("#teamIntroInfo").html(language["teamIntroInfo"]);
+            $("#teamIntro").html(language["teamIntro"]);
+            $("#systemIntro").html(language["systemIntro"]);
+            $("#systemIntroInfo").html(language["systemIntroInfo"]);
+            $("#systemModelSave").html(language["systemModelSave"]);
+            $("#systemDatasetSave").html(language["systemDatasetSave"]);
+            $("#systemDevelopers").html(language["systemDevelopers"]);
+
+        }
+    </script>
+{% endblock %}
